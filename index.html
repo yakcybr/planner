@@ -25,406 +25,257 @@ button{font-family:inherit;cursor:pointer}
 .day-hdr{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
 .day-hdr span{text-align:center;font-size:10px;font-weight:600;color:#555;padding:4px 0}
 .month-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:24px}
-.cell{background:#12121a;border-radius:8px;padding:6px 5px;min-height:90px;border:1px solid #1a1a28;transition:opacity .15s}
+.cell{background:#12121a;border-radius:8px;padding:6px 5px;min-height:90px;border:1px solid #1a1a28}
 .cell.today{background:#0f1a14;border-color:#22c55e44}
-.cell.outside{opacity:.25}
-.cell.past{opacity:.35}
-.cell.past-active{opacity:.6}
+.cell.outside{opacity:.25}.cell.past{opacity:.35}.cell.past-active{opacity:.6}
 .date-num{text-align:center;margin-bottom:4px}
 .date-num span{font-size:13px;font-weight:700;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;color:#555}
 .cell.today .date-num span{background:#22c55e;color:#000}
 .items{display:flex;flex-direction:column;gap:2px}
-.class-pill{background:#1a1a28;border-radius:4px;padding:3px 5px;border-left:2px solid;font-size:8px;font-weight:700}
-.dl-pill{border-radius:4px;padding:2px 4px;display:flex;align-items:center;gap:3px;border-left:2px solid;font-size:7px;font-weight:600;cursor:pointer}
-.dl-pill.done{opacity:.5}
-.dl-pill .check{flex-shrink:0;width:12px;height:12px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700}
-.work-pill{background:#1a1428;border-radius:4px;padding:3px 5px;border-left:2px solid #a855f7}
-.wk-pill{border-radius:4px;padding:2px 4px;display:flex;align-items:center;gap:3px;font-size:7px;font-weight:600}
+.cp{background:#1a1a28;border-radius:4px;padding:3px 5px;border-left:2px solid;font-size:8px;font-weight:700}
+.dp{border-radius:4px;padding:2px 4px;display:flex;align-items:center;gap:3px;border-left:2px solid;font-size:7px;font-weight:600;cursor:pointer}
+.dp.done{opacity:.5}
+.dp .ck{flex-shrink:0;width:12px;height:12px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700}
+.wp{background:#1a1428;border-radius:4px;padding:3px 5px;border-left:2px solid #a855f7}
+.wkp{border-radius:4px;padding:2px 4px;display:flex;align-items:center;gap:3px;font-size:7px;font-weight:600}
 .filters{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
 .filters button{padding:6px 14px;border-radius:6px;border:1px solid #2a2a3a;font-size:11px;font-weight:600;background:#1a1a2e;color:#666}
 .filters button.active{color:#000}
-.dl-list{display:flex;flex-direction:column;gap:5px}
-.dl-row{border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;border-left:3px solid}
-.dl-row .left{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
-.dl-row .check-btn{width:24px;height:24px;border-radius:6px;border:2px solid;background:transparent;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer}
-.dl-row .icon{font-size:16px;flex-shrink:0}
-.dl-row .title{font-size:13px;font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.dl-row .date-info{font-size:11px;color:#666;font-family:'JetBrains Mono',monospace}
-.dl-row .course-tag{font-size:11px;font-weight:600}
-.dl-row .days-badge{font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;font-family:'JetBrains Mono',monospace}
-.section-title{font-size:11px;font-weight:700;color:#888;letter-spacing:.5px;margin-bottom:12px;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
-.wk-card{background:#12121a;border-radius:10px;padding:14px 16px;border-top:3px solid;cursor:pointer;transition:all .15s}
-.wk-card .exercises{margin-top:12px;display:flex;flex-direction:column;gap:6px}
-.wk-card .ex-row{display:flex;align-items:center;gap:8px;padding:6px 8px;background:#0a0a0f;border-radius:6px}
-.class-card{flex:1;min-width:140px;background:#12121a;border-radius:10px;padding:14px 16px;border-top:3px solid}
-.banner{background:linear-gradient(135deg,#12121a,#16162a);border:1px solid #1e1e2e;border-radius:12px;padding:14px 16px;margin-bottom:16px}
-.banner-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
-.banner-card{border-left:3px solid;border-radius:8px;padding:10px 12px;min-width:150px;display:flex;flex-direction:column;gap:4px;flex-shrink:0}
-.export-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.export-bar button{padding:6px 12px;border-radius:6px;border:1px solid #2a2a3a;background:#1a1a2e;color:#888;font-size:11px;font-weight:600}
-.export-bar textarea{flex:1;min-width:200px;background:#0a0a0f;border:1px solid #2a2a3a;border-radius:6px;color:#888;font-size:10px;font-family:'JetBrains Mono',monospace;padding:6px;resize:none;height:32px}
+.dlst{display:flex;flex-direction:column;gap:5px}
+.dr{border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;border-left:3px solid}
+.dr .lt{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+.dr .cb{width:24px;height:24px;border-radius:6px;border:2px solid;background:transparent;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer}
+.dr .ic{font-size:16px;flex-shrink:0}
+.dr .tt{font-size:13px;font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dr .di{font-size:11px;color:#666;font-family:'JetBrains Mono',monospace}
+.dr .ct{font-size:11px;font-weight:600}
+.dr .db{font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;font-family:'JetBrains Mono',monospace}
+.st{font-size:11px;font-weight:700;color:#888;letter-spacing:.5px;margin-bottom:12px;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.wc{background:#12121a;border-radius:10px;padding:14px 16px;border-top:3px solid;cursor:pointer}
+.wc .exs{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.wc .exr{display:flex;align-items:center;gap:8px;padding:6px 8px;background:#0a0a0f;border-radius:6px}
+.cc{flex:1;min-width:140px;background:#12121a;border-radius:10px;padding:14px 16px;border-top:3px solid}
+.bn{background:linear-gradient(135deg,#12121a,#16162a);border:1px solid #1e1e2e;border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.bs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.bc{border-left:3px solid;border-radius:8px;padding:10px 12px;min-width:150px;display:flex;flex-direction:column;gap:4px;flex-shrink:0}
+.eb{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.eb button{padding:6px 12px;border-radius:6px;border:1px solid #2a2a3a;background:#1a1a2e;color:#888;font-size:11px;font-weight:600}
+.eb textarea{flex:1;min-width:200px;background:#0a0a0f;border:1px solid #2a2a3a;border-radius:6px;color:#888;font-size:10px;font-family:'JetBrains Mono',monospace;padding:6px;resize:none;height:32px}
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#22c55e;color:#000;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:100}
 .toast.show{opacity:1}
 
-/* ── RESPONSIVE ── */
 @media(max-width:700px){
   body{padding:12px 8px}
   .hdr h1{font-size:20px}
   .month-grid{gap:2px}
   .cell{padding:4px 3px;min-height:60px;border-radius:6px}
   .date-num span{font-size:11px;width:20px;height:20px}
-  .class-pill,.dl-pill,.work-pill,.wk-pill{font-size:6px;padding:2px 3px;border-left-width:2px}
-  .dl-pill .check{width:10px;height:10px;font-size:6px}
-  .dl-pill span{font-size:6px}
-  .banner-card{min-width:120px;padding:8px 10px}
-  .banner-card span{font-size:10px}
-  .dl-row{padding:10px;flex-wrap:wrap;gap:6px}
-  .dl-row .title{font-size:12px}
-  .dl-row .icon{font-size:14px}
-  .dl-row .check-btn{width:20px;height:20px}
-  .dl-row .days-badge{font-size:10px;padding:3px 8px}
-  .dl-row .course-tag{font-size:9px}
-  .filters{gap:4px}
-  .filters button{padding:5px 10px;font-size:10px}
-  .wk-card{padding:10px 12px}
-  .wk-card .ex-row{padding:4px 6px}
-  .wk-card .ex-row span{font-size:10px}
-  .class-card{min-width:100%;flex:unset}
-  .export-bar{flex-direction:column}
-  .export-bar textarea{min-width:unset;width:100%}
+  .cp,.dp,.wp,.wkp{font-size:6px;padding:2px 3px}
+  .dp .ck{width:10px;height:10px;font-size:6px}
+  .bc{min-width:120px;padding:8px 10px}
+  .dr{padding:10px;flex-wrap:wrap;gap:6px}
+  .dr .tt{font-size:12px}.dr .ic{font-size:14px}.dr .cb{width:20px;height:20px}
+  .dr .db{font-size:10px;padding:3px 8px}.dr .ct{font-size:9px}
+  .filters{gap:4px}.filters button{padding:5px 10px;font-size:10px}
+  .wc{padding:10px 12px}.wc .exr{padding:4px 6px}.wc .exr span{font-size:10px}
+  .cc{min-width:100%;flex:unset}
+  .eb{flex-direction:column}.eb textarea{min-width:unset;width:100%}
   .nav button{padding:4px 10px;font-size:11px}
   .day-hdr span{font-size:9px}
 }
 </style>
 </head>
 <body>
-
 <div class="toast" id="toast"></div>
-
+<div id="app"></div>
 <script>
-// ── DATA ──
-const CLASSES = [
-  { day: 2, name: "CYBR 442", subtitle: "Cyber Operations", time: "6:00–9:50 PM", color: "#e74c3c", instructor: "Prof. Hepp", tag: "Hybrid" },
-  { day: 3, name: "CYBR 499", subtitle: "Capstone II", time: "6:00–9:50 PM", color: "#3498db", instructor: "Prof. Tandon", tag: "Zoom" },
-  { day: 4, name: "CYBR 445", subtitle: "Incident Response", time: "6:00–9:50 PM", color: "#f39c12", instructor: "Prof. Hepp", tag: "Online" },
+const CLS=[
+  {day:2,name:"CYBR 442",sub:"Cyber Operations",time:"6:00–9:50 PM",color:"#e74c3c",prof:"Prof. Hepp",tag:"Hybrid"},
+  {day:3,name:"CYBR 499",sub:"Capstone II",time:"6:00–9:50 PM",color:"#3498db",prof:"Prof. Tandon",tag:"Zoom"},
+  {day:4,name:"CYBR 445",sub:"Incident Response",time:"6:00–9:50 PM",color:"#f39c12",prof:"Prof. Hepp",tag:"Zoom"},
 ];
-const IN_PERSON = ["2026-05-19", "2026-06-30", "2026-08-11"];
-const WORK_SHIFTS = [];
-const DEADLINES = [
-  { id: "c442-whoami", date: "2026-05-26", title: "Who Am I? Video", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-ethics-agree", date: "2026-05-26", title: "Ethics Agreement", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-career", date: "2026-05-26", title: "Career Exercise", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-namecoach", date: "2026-05-26", title: "Name Coach", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-bco-paper", date: "2026-06-02", title: "Basic Cyber Operations Paper", course: "CYBR 442", color: "#e74c3c", type: "paper" },
-  { id: "c442-bco-disc", date: "2026-06-02", title: "BCO Discussion Post", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-ethics-paper", date: "2026-06-09", title: "Ethics Paper", course: "CYBR 442", color: "#e74c3c", type: "paper" },
-  { id: "c442-vid-proposal", date: "2026-06-09", title: "Individual Video Proposal", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-sched-exam", date: "2026-06-09", title: "Schedule Cloud+ Cert Exam", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-group-prop", date: "2026-06-16", title: "Group Project Proposal", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-ch3-labs", date: "2026-06-23", title: "Chapter 3 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ch4-labs", date: "2026-06-30", title: "Chapter 4 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ch5-labs", date: "2026-07-07", title: "Chapter 5 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ch6-labs", date: "2026-07-07", title: "Chapter 6 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ind-video", date: "2026-07-07", title: "Individual Video (15+ min)", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-ch7-labs", date: "2026-07-14", title: "Chapter 7 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ch8-labs", date: "2026-07-21", title: "Chapter 8 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ch9-labs", date: "2026-07-28", title: "Chapter 9 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ch10-labs", date: "2026-08-04", title: "Chapter 10 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-cyber-range", date: "2026-08-04", title: "Cyber Range Assignment", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-rec-lecture", date: "2026-08-04", title: "Watch Recorded Lecture (2x)", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-ch11-labs", date: "2026-08-11", title: "Chapter 11 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-ch12-labs", date: "2026-08-11", title: "Chapter 12 Labs (Cloud+)", course: "CYBR 442", color: "#e74c3c", type: "lab" },
-  { id: "c442-feedback", date: "2026-08-11", title: "Course Feedback Discussion", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-group-paper", date: "2026-08-11", title: "Group Project Paper", course: "CYBR 442", color: "#e74c3c", type: "paper" },
-  { id: "c442-group-peer", date: "2026-08-11", title: "Group Peer Evals + AI Attestation", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-group-slides", date: "2026-08-11", title: "Group Project Slide Deck", course: "CYBR 442", color: "#e74c3c", type: "assignment" },
-  { id: "c442-cloudplus", date: "2026-08-14", title: "CompTIA Cloud+ Exam (CV0-004)", course: "CYBR 442", color: "#10b981", type: "exam" },
-  { id: "c499-pr1", date: "2026-06-03", title: "Progress Report #1 (50 pts)", course: "CYBR 499", color: "#3498db", type: "paper" },
-  { id: "c499-pr2", date: "2026-06-17", title: "Progress Report #2 (50 pts)", course: "CYBR 499", color: "#3498db", type: "paper" },
-  { id: "c499-pr3", date: "2026-07-01", title: "Progress Report #3 (50 pts)", course: "CYBR 499", color: "#3498db", type: "paper" },
-  { id: "c499-draft", date: "2026-07-15", title: "Draft Thesis + Discussion (300 pts)", course: "CYBR 499", color: "#3498db", type: "paper" },
-  { id: "c499-final", date: "2026-07-29", title: "Final Thesis (400 pts)", course: "CYBR 499", color: "#3498db", type: "paper" },
-  { id: "c499-defense", date: "2026-08-05", title: "Oral Defense PowerPoint", course: "CYBR 499", color: "#3498db", type: "assignment" },
+const IP=["2026-05-19","2026-06-30","2026-08-11"];
+const WS=[];
+const DL=[
+  // ── CYBR 442 ──
+  {id:"c442-whoami",date:"2026-05-26",title:"Who Am I? Video",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-ethics-agree",date:"2026-05-26",title:"Ethics Agreement",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-career",date:"2026-05-26",title:"Career Exercise",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-namecoach",date:"2026-05-26",title:"Name Coach",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-bco-paper",date:"2026-06-02",title:"BCO Paper",course:"CYBR 442",color:"#e74c3c",type:"paper"},
+  {id:"c442-bco-disc",date:"2026-06-02",title:"BCO Discussion Post",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-ethics-paper",date:"2026-06-09",title:"Ethics Paper",course:"CYBR 442",color:"#e74c3c",type:"paper"},
+  {id:"c442-vid-proposal",date:"2026-06-09",title:"Video Proposal",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-sched-exam",date:"2026-06-09",title:"Schedule Cloud+ Exam",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-group-prop",date:"2026-06-16",title:"Group Project Proposal",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-ch3-labs",date:"2026-06-23",title:"Ch 3 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ch4-labs",date:"2026-06-30",title:"Ch 4 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ch5-labs",date:"2026-07-07",title:"Ch 5 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ch6-labs",date:"2026-07-07",title:"Ch 6 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ind-video",date:"2026-07-07",title:"Individual Video (15+ min)",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-ch7-labs",date:"2026-07-14",title:"Ch 7 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ch8-labs",date:"2026-07-21",title:"Ch 8 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ch9-labs",date:"2026-07-28",title:"Ch 9 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ch10-labs",date:"2026-08-04",title:"Ch 10 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-cyber-range",date:"2026-08-04",title:"Cyber Range Assignment",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-rec-lecture",date:"2026-08-04",title:"Watch Recorded Lecture (2x)",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-ch11-labs",date:"2026-08-11",title:"Ch 11 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-ch12-labs",date:"2026-08-11",title:"Ch 12 Labs (Cloud+)",course:"CYBR 442",color:"#e74c3c",type:"lab"},
+  {id:"c442-feedback",date:"2026-08-11",title:"Course Feedback Discussion",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-group-paper",date:"2026-08-11",title:"Group Project Paper",course:"CYBR 442",color:"#e74c3c",type:"paper"},
+  {id:"c442-group-peer",date:"2026-08-11",title:"Peer Evals + AI Attestation",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-group-slides",date:"2026-08-11",title:"Group Project Slides",course:"CYBR 442",color:"#e74c3c",type:"assignment"},
+  {id:"c442-cloudplus",date:"2026-08-14",title:"CompTIA Cloud+ (CV0-004)",course:"CYBR 442",color:"#10b981",type:"exam"},
+  // ── CYBR 499 ──
+  {id:"c499-pr1",date:"2026-06-03",title:"Progress Report #1 (50 pts)",course:"CYBR 499",color:"#3498db",type:"paper"},
+  {id:"c499-pr2",date:"2026-06-17",title:"Progress Report #2 (50 pts)",course:"CYBR 499",color:"#3498db",type:"paper"},
+  {id:"c499-pr3",date:"2026-07-01",title:"Progress Report #3 (50 pts)",course:"CYBR 499",color:"#3498db",type:"paper"},
+  {id:"c499-draft",date:"2026-07-15",title:"Draft Thesis + Discussion (300 pts)",course:"CYBR 499",color:"#3498db",type:"paper"},
+  {id:"c499-final",date:"2026-07-29",title:"Final Thesis (400 pts)",course:"CYBR 499",color:"#3498db",type:"paper"},
+  {id:"c499-defense",date:"2026-08-05",title:"Oral Defense PowerPoint",course:"CYBR 499",color:"#3498db",type:"assignment"},
+  // ── CYBR 445 ──
+  {id:"c445-q1",date:"2026-05-28",title:"Quiz 1 + Module 1 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-fw",date:"2026-05-28",title:"First Week Assignments",course:"CYBR 445",color:"#f39c12",type:"assignment"},
+  {id:"c445-q23",date:"2026-06-04",title:"Quiz 2 & 3 + Module 2 & 3 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-q4",date:"2026-06-11",title:"Quiz 4 + Module 4 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-q5",date:"2026-06-18",title:"Quiz 5 + Module 5 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-q6",date:"2026-06-25",title:"Quiz 6 + Module 6 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-ir1",date:"2026-07-02",title:"IR Report #1 (10%)",course:"CYBR 445",color:"#f39c12",type:"paper"},
+  {id:"c445-q7",date:"2026-06-25",title:"Quiz 7 + Module 7 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-q8",date:"2026-07-02",title:"Quiz 8 + Module 8 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-q9",date:"2026-07-09",title:"Quiz 9 + Module 9 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-q10",date:"2026-07-16",title:"Quiz 10 + Module 10 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-q11",date:"2026-07-23",title:"Quiz 11 + Module 11 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-ir2",date:"2026-07-30",title:"IR Report #2 (10%)",course:"CYBR 445",color:"#f39c12",type:"paper"},
+  {id:"c445-q12",date:"2026-07-30",title:"Quiz 12 + Module 12 Labs",course:"CYBR 445",color:"#f39c12",type:"quiz"},
+  {id:"c445-m1314",date:"2026-08-06",title:"Module 13 & 14 Labs",course:"CYBR 445",color:"#f39c12",type:"lab"},
+  {id:"c445-grp-paper",date:"2026-08-13",title:"Group IR Report #3 Paper",course:"CYBR 445",color:"#f39c12",type:"paper"},
+  {id:"c445-grp-slides",date:"2026-08-13",title:"Group Slides + Video",course:"CYBR 445",color:"#f39c12",type:"assignment"},
+  {id:"c445-grp-peer",date:"2026-08-13",title:"Group Peer Evaluation",course:"CYBR 445",color:"#f39c12",type:"assignment"},
+  {id:"c445-cysa",date:"2026-08-16",title:"CompTIA CySA+ (CS0-003)",course:"CYBR 445",color:"#10b981",type:"exam"},
 ];
-const WORKOUTS = [
-  { name: "Push", emoji: "💪", color: "#ef4444", exercises: ["Push-ups — 3×15", "Diamond push-ups — 3×10", "DB shoulder press — 3×12", "DB chest fly — 3×12", "Pike push-ups — 3×8", "Tricep dips (chair) — 3×12"] },
-  { name: "Pull", emoji: "🏋️", color: "#8b5cf6", exercises: ["Pull-ups — 3× max", "Chin-ups — 3× max", "DB bent-over rows — 3×12", "DB bicep curls — 3×12", "DB hammer curls — 3×10", "Dead hangs — 3×30s"] },
-  { name: "Legs", emoji: "🦵", color: "#f59e0b", exercises: ["DB goblet squats — 3×15", "Bulgarian split squats — 3×10/leg", "Walking lunges — 3×12/leg", "DB Romanian deadlifts — 3×12", "Calf raises — 3×20", "Wall sit — 3×45s"] },
-  { name: "Core", emoji: "🔥", color: "#10b981", exercises: ["Plank — 3×60s", "Mountain climbers — 3×30s", "Bicycle crunches — 3×20", "Leg raises — 3×15", "DB Russian twists — 3×20", "Burpees — 3×10"] },
+const WKS=[
+  {name:"Push",emoji:"💪",color:"#ef4444",ex:["Push-ups — 3×15","Diamond push-ups — 3×10","DB shoulder press — 3×12","DB chest fly — 3×12","Pike push-ups — 3×8","Tricep dips (chair) — 3×12"]},
+  {name:"Pull",emoji:"🏋️",color:"#8b5cf6",ex:["Pull-ups — 3× max","Chin-ups — 3× max","DB bent-over rows — 3×12","DB bicep curls — 3×12","DB hammer curls — 3×10","Dead hangs — 3×30s"]},
+  {name:"Legs",emoji:"🦵",color:"#f59e0b",ex:["DB goblet squats — 3×15","Bulgarian split squats — 3×10/leg","Walking lunges — 3×12/leg","DB Romanian deadlifts — 3×12","Calf raises — 3×20","Wall sit — 3×45s"]},
+  {name:"Core",emoji:"🔥",color:"#10b981",ex:["Plank — 3×60s","Mountain climbers — 3×30s","Bicycle crunches — 3×20","Leg raises — 3×15","DB Russian twists — 3×20","Burpees — 3×10"]},
 ];
+const SS="2026-05-19",SE="2026-08-16";
+const DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],DF=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],MF=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const IC={lab:"🧪",quiz:"📋",exam:"🔴",paper:"📝",assignment:"📄"};
+const WC="#a855f7",MO="'JetBrains Mono',monospace";
 
-const SEM_START = "2026-05-19", SEM_END = "2026-08-14";
-const DAY_NAMES = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-const DAY_FULL = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const MON_FULL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const ICONS = { lab:"🧪", quiz:"📋", exam:"🔴", paper:"📝", assignment:"📄" };
+let cM,cY,done,wkD,filt,shD,exW;
+const td=new Date(),ts=fmt(td);
 
-// ── STATE ──
-let curMonth, curYear, done, wkDays, filter, showDone, expandedWk;
-const today = new Date();
-const todayStr = fmt(today);
+function init(){cM=td.getMonth();cY=td.getFullYear();done=JSON.parse(localStorage.getItem("sp-done")||'{"c442-ethics-agree":true,"c442-namecoach":true}');wkD=JSON.parse(localStorage.getItem("sp-wkdays")||"[1,2,5,6]");filt="all";shD=false;exW=null;render();}
+function fmt(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function dB(a,b){return Math.ceil((new Date(a+"T00:00:00")-new Date(b+"T00:00:00"))/86400000);}
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2000);}
+function tgl(id){if(done[id])delete done[id];else done[id]=true;localStorage.setItem("sp-done",JSON.stringify(done));render();}
+function gW(d){const s=[...wkD].sort((a,b)=>a-b);const i=s.indexOf(d);return i===-1?null:WKS[i%WKS.length];}
+function expP(){const c=btoa(JSON.stringify({done,wkDays:wkD,ts:new Date().toISOString()}));navigator.clipboard.writeText(c).then(()=>toast("Copied! Paste to Claude or other device."));}
+function impP(){const ta=document.getElementById("imp");if(!ta||!ta.value.trim())return;try{const d=JSON.parse(atob(ta.value.trim()));if(d.done){done=d.done;localStorage.setItem("sp-done",JSON.stringify(done));}if(d.wkDays){wkD=d.wkDays;localStorage.setItem("sp-wkdays",JSON.stringify(wkD));}ta.value="";toast("Progress imported!");render();}catch(e){toast("Invalid code");}}
+function gCells(){const f=new Date(cY,cM,1),sd=f.getDay(),dm=new Date(cY,cM+1,0).getDate(),c=[];for(let i=0;i<sd;i++){const d=new Date(cY,cM,1-(sd-i));c.push({d,s:fmt(d),w:d.getDay(),o:true});}for(let i=1;i<=dm;i++){const d=new Date(cY,cM,i);c.push({d,s:fmt(d),w:d.getDay(),o:false});}const r=7-(c.length%7);if(r<7)for(let i=1;i<=r;i++){const d=new Date(cY,cM+1,i);c.push({d,s:fmt(d),w:d.getDay(),o:true});}return c;}
+function pM(){if(cM===0){cM=11;cY--;}else cM--;render();}
+function nM(){if(cM===11){cM=0;cY++;}else cM++;render();}
+function goT(){cM=td.getMonth();cY=td.getFullYear();render();}
 
-function init() {
-  curMonth = today.getMonth();
-  curYear = today.getFullYear();
-  done = JSON.parse(localStorage.getItem("sp-done") || "{}");
-  wkDays = JSON.parse(localStorage.getItem("sp-wkdays") || "[1,2,5,6]");
-  filter = "all";
-  showDone = false;
-  expandedWk = null;
-  render();
+function render(){
+const up=DL.filter(d=>!done[d.id]&&dB(d.date,ts)>=0).filter(d=>filt==="all"||d.course===filt).sort((a,b)=>a.date.localeCompare(b.date));
+const uc=up.filter(d=>dB(d.date,ts)<=7).length;
+const dc=Object.keys(done).filter(k=>done[k]).length;
+const cells=gCells();
+let h='';
+
+// Header
+h+=`<div class="hdr"><div><h1 style="font-size:26px;font-weight:700;color:#fff">Semester Planner</h1><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><span class="mono" style="font-size:13px;color:#666">Summer 2026 · Metro State</span><span class="mono" style="font-size:10px;font-weight:700;color:#10b981;background:rgba(16,185,129,.12);padding:3px 8px;border-radius:4px">FINAL SEMESTER 🎓</span></div></div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">`;
+if(dc>0)h+=`<span class="badge" style="color:#22c55e;background:rgba(34,197,94,.1)">${dc} done ✓</span>`;
+if(uc>0)h+=`<span class="badge" style="color:#ef4444;background:rgba(239,68,68,.1);animation:pulse 1.5s infinite">${uc} due this week</span>`;
+h+=`</div></div>`;
+
+// Export/Import
+h+=`<div class="eb"><button onclick="expP()">📤 Export Progress</button><textarea id="imp" placeholder="Paste import code here..."></textarea><button onclick="impP()">📥 Import</button></div>`;
+
+// Banner
+h+=`<div class="bn"><div style="display:flex;justify-content:space-between;margin-bottom:10px"><span class="mono" style="font-size:10px;font-weight:700;color:#555;letter-spacing:1.5px">${up.length?"UPCOMING DEADLINES":"ALL CAUGHT UP"}</span><span class="mono" style="font-size:10px;font-weight:700;color:#3a5a3a;letter-spacing:1.5px">ALL SYLLABI LOADED</span></div>`;
+if(!up.length){h+=`<div style="text-align:center;padding:16px 0"><p style="font-size:28px">🎉</p><p style="color:#22c55e;font-size:15px;font-weight:600;margin-top:8px">All caught up!</p></div>`;}
+else{h+=`<div class="bs">`;up.slice(0,6).forEach(d=>{const dy=dB(d.date,ts),u=dy<=3,ex=d.type==="exam";h+=`<div class="bc" style="border-color:${d.color};background:${ex?"#0a1a14":u?"#1a1018":"#1a1a28"}${ex?";animation:glow 2s infinite":""}"><div style="display:flex;justify-content:space-between"><span style="font-size:12px">${ex?"🏆":IC[d.type]||"📌"}</span><span class="mono" style="font-size:12px;font-weight:700;color:${u?"#ef4444":"#22c55e"}${u?";animation:pulse 1.5s infinite":""}">${dy===0?"TODAY":dy+"d"}</span></div><span style="font-size:12px;color:${ex?"#10b981":"#ddd"};font-weight:${ex?700:500}">${d.title}</span><span style="font-size:10px;color:${d.color};font-weight:600">${d.course}</span></div>`;});h+=`</div>`;}
+h+=`</div>`;
+
+// Nav
+h+=`<div class="nav"><button onclick="pM()">← Prev</button><div style="display:flex;align-items:center;gap:10px"><span style="font-size:15px;font-weight:600;color:#ccc">${MF[cM]} ${cY}</span>`;
+if(cM!==td.getMonth()||cY!==td.getFullYear())h+=`<button class="today-btn" onclick="goT()">Today</button>`;
+h+=`</div><button onclick="nM()">Next →</button></div>`;
+
+// Day headers + grid
+h+=`<div class="day-hdr">${DN.map(d=>`<span>${d}</span>`).join("")}</div><div class="month-grid">`;
+cells.forEach(({d:date,s:str,w:dow,o:out})=>{
+  const iT=str===ts,inS=str>=SS&&str<=SE;
+  const cl=inS?CLS.filter(c=>c.day===dow):[],dl=DL.filter(d=>d.date===str),sh=WS.filter(s=>s.date===str);
+  const wk=sh.length===0?gW(dow):null,pa=str<ts,ip=IP.includes(str);
+  let cc="cell";if(iT)cc+=" today";if(out)cc+=" outside";else if(pa&&!dl.some(d=>!done[d.id]))cc+=" past";else if(pa)cc+=" past-active";
+  h+=`<div class="${cc}"><div class="date-num"><span>${date.getDate()}</span></div><div class="items">`;
+  sh.forEach(s=>{h+=`<div class="wp"><span style="font-size:8px;font-weight:700;color:${WC}">${s.role==="Floor Manager"?"FM":"Bar"}</span><span class="mono" style="font-size:7px;color:#999;display:block">${s.start}–${s.end}</span></div>`;});
+  cl.forEach(c=>{const irl=ip&&c.name==="CYBR 442";h+=`<div class="cp" style="border-color:${c.color}"><div style="display:flex;justify-content:space-between;align-items:center"><span style="color:${c.color}">${c.name}</span>${irl?'<span style="font-size:6px;background:#ef444422;color:#fbbf24;padding:0 3px;border-radius:2px;font-weight:700">IRL</span>':""}</div></div>`;});
+  dl.forEach(d=>{const iD=done[d.id],ex=d.type==="exam";h+=`<div class="dp${iD?" done":""}" style="border-color:${iD?"#333":d.color};background:${ex?"#0a1a14":iD?"#111118":"#1e1418"}" ${!ex?`onclick="tgl('${d.id}')"`:""}>`;if(!ex)h+=`<span class="ck" style="${iD?"background:#22c55e;color:#000":"border:1.5px solid "+d.color+"44"}">${iD?"✓":""}</span>`;if(ex)h+=`<span style="font-size:10px">🏆</span>`;h+=`<span style="color:${ex?"#10b981":iD?"#555":"#f87171"};${iD?"text-decoration:line-through;":""}overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${d.title}</span></div>`;});
+  if(wk&&!out)h+=`<div class="wkp" style="background:${wk.color}10;border:1px solid ${wk.color}22"><span style="font-size:9px">${wk.emoji}</span><span style="color:${wk.color}">${wk.name}</span></div>`;
+  h+=`</div></div>`;
+});
+h+=`</div>`;
+
+// Filters
+h+=`<div class="filters">`;
+["all","CYBR 442","CYBR 499","CYBR 445"].forEach(c=>{const a=filt===c,co=c==="all"?"#fff":CLS.find(x=>x.name===c)?.color||"#fff";h+=`<button style="${a?`background:${co};color:#000`:""}" onclick="filt='${c}';render()">${c==="all"?"All Courses":c}</button>`;});
+if(dc>0)h+=`<button style="margin-left:auto;${shD?"background:#22c55e;color:#000":""}" onclick="shD=!shD;render()">${shD?"Hide":"Show"} completed (${dc})</button>`;
+h+=`</div>`;
+
+// Remaining
+h+=`<div style="margin-bottom:24px"><h3 class="st">Remaining Deadlines (${up.length})</h3>`;
+if(!up.length)h+=`<div style="background:#12121a;border-radius:10px;padding:24px;text-align:center"><p style="font-size:28px">🎉</p><p style="color:#22c55e;font-size:15px;font-weight:600;margin-top:8px">All caught up!</p></div>`;
+else{h+=`<div class="dlst">`;up.forEach(d=>{const dy=dB(d.date,ts),dO=new Date(d.date+"T00:00:00"),u=dy<=3,tw=dy<=7,ex=d.type==="exam";
+h+=`<div class="dr" style="border-color:${d.color};background:${ex?"#0a1a14":u?"#1a1018":"#12121a"}${ex?";animation:glow 2s infinite":""}"><div class="lt">`;
+if(!ex)h+=`<button class="cb" style="border-color:${d.color}55" onclick="tgl('${d.id}')"> </button>`;
+h+=`<span class="ic">${ex?"🏆":IC[d.type]||"📌"}</span><div style="min-width:0"><span class="tt" style="color:${ex?"#10b981":"#ddd"};font-weight:${ex?700:500}">${d.title}</span><span class="di">${DF[dO.getDay()]}, ${MN[dO.getMonth()]} ${dO.getDate()}</span></div></div>`;
+h+=`<div style="display:flex;align-items:center;gap:8px;flex-shrink:0"><span class="ct" style="color:${d.color}">${d.course}</span><span class="db" style="color:${u?"#ef4444":tw?"#fbbf24":"#22c55e"};background:${u?"rgba(239,68,68,.1)":tw?"rgba(251,191,36,.08)":"rgba(34,197,94,.08)"}">${dy===0?"TODAY":dy+"d"}</span></div></div>`;
+});h+=`</div>`;}h+=`</div>`;
+
+// Completed
+if(shD&&dc>0){const comp=DL.filter(d=>done[d.id]).filter(d=>filt==="all"||d.course===filt);
+h+=`<div style="margin-bottom:24px"><h3 class="st">Completed (${comp.length})</h3><div class="dlst">`;
+comp.forEach(d=>{h+=`<div class="dr" style="border-color:#333;background:#0e0e14;opacity:.6"><div class="lt"><button class="cb" style="border:none;background:#22c55e;color:#000;font-weight:700;font-size:13px" onclick="tgl('${d.id}')">✓</button><div><span style="font-size:13px;color:#555;text-decoration:line-through">${d.title}</span><span style="font-size:11px;color:#444;display:block">${d.course}</span></div></div><span style="font-size:11px;color:#333;font-style:italic">undo</span></div>`;});
+h+=`</div></div>`;}
+
+// Workouts
+h+=`<div style="margin-bottom:24px"><h3 class="st">Home Workout Plan</h3><p style="font-size:11px;color:#555;margin-bottom:10px">Equipment: yoga mat · pull-up bar · 2×15 lb dumbbells</p><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">`;
+WKS.forEach((wk,i)=>{const op=exW===i,as=[...wkD].sort((a,b)=>a-b).filter((_,idx)=>idx%WKS.length===i).map(d=>DN[d]);
+h+=`<div class="wc" style="border-color:${wk.color}" onclick="exW=exW===${i}?null:${i};render()"><div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">${wk.emoji}</span><div><span style="font-size:15px;font-weight:700;color:${wk.color};display:block">${wk.name} Day</span>${as.length?`<span class="mono" style="font-size:10px;color:#555">${as.join(", ")}</span>`:""}</div></div><span style="font-size:14px;color:#555">${op?"▲":"▼"}</span></div>`;
+if(op){h+=`<div class="exs">`;wk.ex.forEach((e,j)=>{h+=`<div class="exr"><span class="mono" style="font-size:10px;color:${wk.color};font-weight:700;min-width:16px">${j+1}</span><span style="font-size:12px;color:#ccc">${e}</span></div>`;});h+=`</div>`;}
+h+=`</div>`;});
+h+=`</div></div>`;
+
+// Classes
+h+=`<div style="margin-bottom:20px"><h3 class="st">Weekly Classes + Work</h3><div style="display:flex;gap:10px;flex-wrap:wrap">`;
+CLS.forEach(c=>{h+=`<div class="cc" style="border-color:${c.color}"><span style="font-size:16px;font-weight:700;color:${c.color};display:block">${c.name}</span><span style="font-size:12px;color:#888">${c.sub}</span><span class="mono" style="font-size:11px;color:#666;display:block;margin-top:6px">${DF[c.day]}s · ${c.time}</span><span style="font-size:11px;color:#555">${c.prof}</span>`;
+if(c.name==="CYBR 442")h+=`<span style="font-size:9px;color:#fbbf24;display:block;margin-top:4px">📍 In person: 5/19, 6/30, 8/11</span>`;
+if(c.name==="CYBR 445")h+=`<span style="font-size:9px;color:#10b981;display:block;margin-top:4px">🏆 CySA+ pass = +2 letter grades</span>`;
+h+=`</div>`;});
+h+=`<div class="cc" style="border-color:${WC}"><span style="font-size:16px;font-weight:700;color:${WC};display:block">CP Maplewood</span><span style="font-size:12px;color:#888">Floor Mgr / Bartender</span><span class="mono" style="font-size:11px;color:#666;display:block;margin-top:6px">Varies · see R365</span></div></div>`;
+h+=`<div style="margin-top:10px;background:#12121a;border-radius:10px;padding:12px 16px;border-left:3px solid #555"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🎓</span><div><span style="font-size:13px;font-weight:600;color:#888">WKSP GRAD — Graduation Requirements</span><span style="font-size:11px;color:#555;display:block">Async · Hauser, Vicki · May 16 – Aug 14</span></div></div></div></div>`;
+
+// Cert exams reminder
+h+=`<div style="background:#0a1a14;border:1px solid #10b98133;border-radius:10px;padding:14px 16px;margin-bottom:20px"><h3 class="st" style="color:#10b981">Certification Exams This Semester</h3><div style="display:flex;gap:12px;flex-wrap:wrap">`;
+h+=`<div style="flex:1;min-width:200px;padding:10px;border-left:3px solid #10b981;background:#12121a;border-radius:8px"><span style="font-size:14px;font-weight:700;color:#10b981;display:block">🏆 CompTIA Cloud+ (CV0-004)</span><span class="mono" style="font-size:11px;color:#666">CYBR 442 · Final exam week Aug 11–14</span><span style="font-size:11px;color:#555;display:block;margin-top:4px">25% of grade · Voucher provided</span></div>`;
+h+=`<div style="flex:1;min-width:200px;padding:10px;border-left:3px solid #10b981;background:#12121a;border-radius:8px"><span style="font-size:14px;font-weight:700;color:#10b981;display:block">🏆 CompTIA CySA+ (CS0-003)</span><span class="mono" style="font-size:11px;color:#666">CYBR 445 · Due Aug 16</span><span style="font-size:11px;color:#555;display:block;margin-top:4px">25% of grade · Pass = +2 letter grades!</span></div>`;
+h+=`</div></div>`;
+
+h+=`<p style="text-align:center;font-size:12px;color:#333;font-style:italic">📅 Summer 2026 · All 3 syllabi loaded · v2.0</p>`;
+
+document.getElementById("app").innerHTML=h;
 }
-
-function fmt(d) { return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
-function daysB(a,b) { return Math.ceil((new Date(a+"T00:00:00")-new Date(b+"T00:00:00"))/86400000); }
-
-function toast(msg) {
-  const t = document.getElementById("toast");
-  t.textContent = msg;
-  t.classList.add("show");
-  setTimeout(() => t.classList.remove("show"), 2000);
-}
-
-function toggleDone(id) {
-  if (done[id]) delete done[id]; else done[id] = true;
-  localStorage.setItem("sp-done", JSON.stringify(done));
-  render();
-}
-
-function getWorkout(dow) {
-  const sorted = [...wkDays].sort((a,b)=>a-b);
-  const idx = sorted.indexOf(dow);
-  return idx === -1 ? null : WORKOUTS[idx % WORKOUTS.length];
-}
-
-function exportProgress() {
-  const code = btoa(JSON.stringify({ done, wkDays, ts: new Date().toISOString() }));
-  navigator.clipboard.writeText(code).then(() => toast("Copied! Paste this to Claude."));
-}
-
-function importProgress() {
-  const ta = document.getElementById("import-ta");
-  if (!ta || !ta.value.trim()) return;
-  try {
-    const data = JSON.parse(atob(ta.value.trim()));
-    if (data.done) { done = data.done; localStorage.setItem("sp-done", JSON.stringify(done)); }
-    if (data.wkDays) { wkDays = data.wkDays; localStorage.setItem("sp-wkdays", JSON.stringify(wkDays)); }
-    ta.value = "";
-    toast("Progress imported!");
-    render();
-  } catch (e) { toast("Invalid code — try again"); }
-}
-
-function getMonthCells() {
-  const first = new Date(curYear, curMonth, 1);
-  const startDow = first.getDay();
-  const dim = new Date(curYear, curMonth+1, 0).getDate();
-  const cells = [];
-  for (let i=0; i<startDow; i++) { const d = new Date(curYear, curMonth, 1-(startDow-i)); cells.push({date:d, str:fmt(d), dow:d.getDay(), out:true}); }
-  for (let i=1; i<=dim; i++) { const d = new Date(curYear, curMonth, i); cells.push({date:d, str:fmt(d), dow:d.getDay(), out:false}); }
-  const rem = 7 - (cells.length % 7);
-  if (rem < 7) for (let i=1; i<=rem; i++) { const d = new Date(curYear, curMonth+1, i); cells.push({date:d, str:fmt(d), dow:d.getDay(), out:true}); }
-  return cells;
-}
-
-// ── RENDER ──
-function render() {
-  const upcoming = DEADLINES.filter(d => !done[d.id] && daysB(d.date, todayStr) >= 0).filter(d => filter==="all" || d.course===filter).sort((a,b)=>a.date.localeCompare(b.date));
-  const urgCount = upcoming.filter(d => daysB(d.date, todayStr) <= 7).length;
-  const doneCount = Object.keys(done).filter(k=>done[k]).length;
-  const cells = getMonthCells();
-
-  let h = '';
-
-  // Header
-  h += `<div class="hdr"><div>`;
-  h += `<h1 style="font-size:26px;font-weight:700;color:#fff">Semester Planner</h1>`;
-  h += `<div style="display:flex;align-items:center;gap:8px;margin-top:2px">`;
-  h += `<span class="mono" style="font-size:13px;color:#666">Summer 2026 · Metro State</span>`;
-  h += `<span class="mono" style="font-size:10px;font-weight:700;color:#10b981;background:rgba(16,185,129,.12);padding:3px 8px;border-radius:4px">FINAL SEMESTER 🎓</span>`;
-  h += `</div></div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">`;
-  if (doneCount > 0) h += `<span class="badge" style="color:#22c55e;background:rgba(34,197,94,.1)">${doneCount} done ✓</span>`;
-  if (urgCount > 0) h += `<span class="badge" style="color:#ef4444;background:rgba(239,68,68,.1);animation:pulse 1.5s infinite">${urgCount} due this week</span>`;
-  h += `</div></div>`;
-
-  // Export/Import bar
-  h += `<div class="export-bar">`;
-  h += `<button onclick="exportProgress()">📤 Export Progress</button>`;
-  h += `<textarea id="import-ta" placeholder="Paste import code here..."></textarea>`;
-  h += `<button onclick="importProgress()">📥 Import</button>`;
-  h += `</div>`;
-
-  // Banner
-  h += `<div class="banner"><div style="display:flex;justify-content:space-between;margin-bottom:10px">`;
-  h += `<span class="mono" style="font-size:10px;font-weight:700;color:#555;letter-spacing:1.5px">${upcoming.length > 0 ? "UPCOMING DEADLINES" : "SEMESTER STATUS"}</span>`;
-  h += `<span class="mono" style="font-size:10px;font-weight:700;color:#3a5a3a;letter-spacing:1.5px">STANDALONE DASHBOARD</span></div>`;
-  if (upcoming.length === 0) {
-    h += `<div style="text-align:center;padding:16px 0"><p style="font-size:28px">🎉</p><p style="color:#22c55e;font-size:15px;font-weight:600;margin-top:8px">All caught up!</p></div>`;
-  } else {
-    h += `<div class="banner-scroll">`;
-    upcoming.slice(0,6).forEach(d => {
-      const days = daysB(d.date, todayStr), urg = days <= 3, isExam = d.type==="exam";
-      h += `<div class="banner-card" style="border-color:${d.color};background:${isExam?"#0a1a14":urg?"#1a1018":"#1a1a28"}${isExam?";animation:glow 2s infinite":""}">`;
-      h += `<div style="display:flex;justify-content:space-between"><span style="font-size:12px">${isExam?"🏆":ICONS[d.type]||"📌"}</span>`;
-      h += `<span class="mono" style="font-size:12px;font-weight:700;color:${urg?"#ef4444":"#22c55e"}${urg?";animation:pulse 1.5s infinite":""}">${days===0?"TODAY":days+"d"}</span></div>`;
-      h += `<span style="font-size:12px;color:${isExam?"#10b981":"#ddd"};font-weight:${isExam?700:500}">${d.title}</span>`;
-      h += `<span style="font-size:10px;color:${d.color};font-weight:600">${d.course}</span></div>`;
-    });
-    h += `</div>`;
-  }
-  h += `</div>`;
-
-  // Month nav
-  h += `<div class="nav">`;
-  h += `<button onclick="curMonth===0?(curMonth=11,curYear--):curMonth--;render()">← Prev</button>`;
-  h += `<div style="display:flex;align-items:center;gap:10px"><span style="font-size:15px;font-weight:600;color:#ccc">${MON_FULL[curMonth]} ${curYear}</span>`;
-  if (curMonth !== today.getMonth() || curYear !== today.getFullYear()) h += `<button class="today-btn" onclick="curMonth=${today.getMonth()};curYear=${today.getFullYear()};render()">Today</button>`;
-  h += `</div><button onclick="curMonth===11?(curMonth=0,curYear++):curMonth++;render()">Next →</button></div>`;
-
-  // Day headers
-  h += `<div class="day-hdr">${DAY_NAMES.map(d=>`<span>${d}</span>`).join("")}</div>`;
-
-  // Month grid
-  h += `<div class="month-grid">`;
-  cells.forEach(({date, str, dow, out}) => {
-    const isToday = str === todayStr;
-    const inSem = str >= SEM_START && str <= SEM_END;
-    const cls = inSem ? CLASSES.filter(c => c.day === dow) : [];
-    const dls = DEADLINES.filter(d => d.date === str);
-    const shifts = WORK_SHIFTS.filter(s => s.date === str);
-    const wk = shifts.length === 0 ? getWorkout(dow) : null;
-    const past = str < todayStr;
-    const isIP = IN_PERSON.includes(str);
-    let cellClass = "cell";
-    if (isToday) cellClass += " today";
-    if (out) cellClass += " outside";
-    else if (past && !dls.some(d => !done[d.id])) cellClass += " past";
-    else if (past) cellClass += " past-active";
-
-    h += `<div class="${cellClass}"><div class="date-num"><span>${date.getDate()}</span></div><div class="items">`;
-
-    shifts.forEach(s => {
-      h += `<div class="work-pill"><span style="font-size:8px;font-weight:700;color:#a855f7">${s.role==="Floor Manager"?"FM":"Bar"}</span><span class="mono" style="font-size:7px;color:#999;display:block">${s.start}–${s.end}</span></div>`;
-    });
-
-    cls.forEach(c => {
-      const irl = isIP && c.name === "CYBR 442";
-      h += `<div class="class-pill" style="border-color:${c.color}"><div style="display:flex;justify-content:space-between;align-items:center"><span style="color:${c.color}">${c.name}</span>`;
-      if (irl) h += `<span style="font-size:6px;background:#ef444422;color:#fbbf24;padding:0 3px;border-radius:2px;font-weight:700">IRL</span>`;
-      h += `</div></div>`;
-    });
-
-    dls.forEach(d => {
-      const isDone = done[d.id], isExam = d.type === "exam";
-      h += `<div class="dl-pill${isDone?" done":""}" style="border-color:${isDone?"#333":d.color};background:${isExam?"#0a1a14":isDone?"#111118":"#1e1418"}" ${!isExam?`onclick="toggleDone('${d.id}')"`:""}>`;
-      if (!isExam) h += `<span class="check" style="${isDone?"background:#22c55e;color:#000":"border:1.5px solid "+d.color+"44"}">${isDone?"✓":""}</span>`;
-      if (isExam) h += `<span style="font-size:10px">🏆</span>`;
-      h += `<span style="color:${isExam?"#10b981":isDone?"#555":"#f87171"};${isDone?"text-decoration:line-through;":""}overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${d.title}</span></div>`;
-    });
-
-    if (wk && !out) {
-      h += `<div class="wk-pill" style="background:${wk.color}10;border:1px solid ${wk.color}22"><span style="font-size:9px">${wk.emoji}</span><span style="color:${wk.color}">${wk.name}</span></div>`;
-    }
-
-    h += `</div></div>`;
-  });
-  h += `</div>`;
-
-  // Filters
-  h += `<div class="filters">`;
-  ["all","CYBR 442","CYBR 499","CYBR 445"].forEach(c => {
-    const active = filter === c;
-    const col = c==="all"?"#fff":CLASSES.find(cl=>cl.name===c)?.color||"#fff";
-    h += `<button style="${active?`background:${col};color:#000`:""}" ${active?'class="active"':""} onclick="filter='${c}';render()">${c==="all"?"All Courses":c}</button>`;
-  });
-  if (doneCount > 0) h += `<button style="margin-left:auto;${showDone?"background:#22c55e;color:#000":""}" onclick="showDone=!showDone;render()">${showDone?"Hide":"Show"} completed (${doneCount})</button>`;
-  h += `</div>`;
-
-  // Remaining deadlines
-  h += `<div style="margin-bottom:24px"><h3 class="section-title">Remaining Deadlines (${upcoming.length})</h3>`;
-  if (upcoming.length === 0) {
-    h += `<div style="background:#12121a;border-radius:10px;padding:24px;text-align:center"><p style="font-size:28px">🎉</p><p style="color:#22c55e;font-size:15px;font-weight:600;margin-top:8px">All caught up!</p></div>`;
-  } else {
-    h += `<div class="dl-list">`;
-    upcoming.forEach(d => {
-      const days = daysB(d.date, todayStr), dateObj = new Date(d.date+"T00:00:00"), urg = days<=3, tw = days<=7, isExam = d.type==="exam";
-      h += `<div class="dl-row" style="border-color:${d.color};background:${isExam?"#0a1a14":urg?"#1a1018":"#12121a"}${isExam?";animation:glow 2s infinite":""}">`;
-      h += `<div class="left">`;
-      if (!isExam) h += `<button class="check-btn" style="border-color:${d.color}55" onclick="toggleDone('${d.id}')"> </button>`;
-      h += `<span class="icon">${isExam?"🏆":ICONS[d.type]||"📌"}</span><div style="min-width:0">`;
-      h += `<span class="title" style="color:${isExam?"#10b981":"#ddd"};font-weight:${isExam?700:500}">${d.title}</span>`;
-      h += `<span class="date-info">${DAY_FULL[dateObj.getDay()]}, ${MON[dateObj.getMonth()]} ${dateObj.getDate()}</span></div></div>`;
-      h += `<div style="display:flex;align-items:center;gap:8px;flex-shrink:0">`;
-      h += `<span class="course-tag" style="color:${d.color}">${d.course}</span>`;
-      h += `<span class="days-badge" style="color:${urg?"#ef4444":tw?"#fbbf24":"#22c55e"};background:${urg?"rgba(239,68,68,.1)":tw?"rgba(251,191,36,.08)":"rgba(34,197,94,.08)"}">${days===0?"TODAY":days+"d"}</span>`;
-      h += `</div></div>`;
-    });
-    h += `</div>`;
-  }
-  h += `</div>`;
-
-  // Completed
-  if (showDone && doneCount > 0) {
-    const completed = DEADLINES.filter(d => done[d.id]).filter(d => filter==="all" || d.course===filter);
-    h += `<div style="margin-bottom:24px"><h3 class="section-title">Completed (${completed.length})</h3><div class="dl-list">`;
-    completed.forEach(d => {
-      h += `<div class="dl-row" style="border-color:#333;background:#0e0e14;opacity:.6"><div class="left">`;
-      h += `<button class="check-btn" style="border:none;background:#22c55e;color:#000;font-weight:700;font-size:13px" onclick="toggleDone('${d.id}')">✓</button>`;
-      h += `<div><span style="font-size:13px;color:#555;text-decoration:line-through">${d.title}</span><span style="font-size:11px;color:#444;display:block">${d.course}</span></div></div>`;
-      h += `<span style="font-size:11px;color:#333;font-style:italic">undo</span></div>`;
-    });
-    h += `</div></div>`;
-  }
-
-  // Workout plan
-  h += `<div style="margin-bottom:24px"><h3 class="section-title">Home Workout Plan</h3>`;
-  h += `<p style="font-size:11px;color:#555;margin-bottom:10px">Equipment: yoga mat · pull-up bar · 2×15 lb dumbbells</p>`;
-  h += `<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">`;
-  WORKOUTS.forEach((wk, i) => {
-    const isOpen = expandedWk === i;
-    const assigned = [...wkDays].sort((a,b)=>a-b).filter((_,idx)=>idx%WORKOUTS.length===i).map(d=>DAY_NAMES[d]);
-    h += `<div class="wk-card" style="border-color:${wk.color}" onclick="expandedWk=expandedWk===${i}?null:${i};render()">`;
-    h += `<div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;align-items:center;gap:8px">`;
-    h += `<span style="font-size:18px">${wk.emoji}</span><div><span style="font-size:15px;font-weight:700;color:${wk.color};display:block">${wk.name} Day</span>`;
-    if (assigned.length) h += `<span class="mono" style="font-size:10px;color:#555">${assigned.join(", ")}</span>`;
-    h += `</div></div><span style="font-size:14px;color:#555">${isOpen?"▲":"▼"}</span></div>`;
-    if (isOpen) {
-      h += `<div class="exercises">`;
-      wk.exercises.forEach((ex, j) => {
-        h += `<div class="ex-row"><span class="mono" style="font-size:10px;color:${wk.color};font-weight:700;min-width:16px">${j+1}</span><span style="font-size:12px;color:#ccc">${ex}</span></div>`;
-      });
-      h += `</div>`;
-    }
-    h += `</div>`;
-  });
-  h += `</div></div>`;
-
-  // Classes + Work
-  h += `<div style="margin-bottom:20px"><h3 class="section-title">Weekly Classes + Work</h3>`;
-  h += `<div style="display:flex;gap:10px;flex-wrap:wrap">`;
-  CLASSES.forEach(c => {
-    h += `<div class="class-card" style="border-color:${c.color}"><span style="font-size:16px;font-weight:700;color:${c.color};display:block">${c.name}</span>`;
-    h += `<span style="font-size:12px;color:#888">${c.subtitle}</span>`;
-    h += `<span class="mono" style="font-size:11px;color:#666;display:block;margin-top:6px">${DAY_FULL[c.day]}s · ${c.time}</span>`;
-    h += `<span style="font-size:11px;color:#555">${c.instructor}</span>`;
-    if (c.name==="CYBR 442") h += `<span style="font-size:9px;color:#fbbf24;display:block;margin-top:4px">📍 In person: 5/19, 6/30, 8/11</span>`;
-    h += `</div>`;
-  });
-  h += `<div class="class-card" style="border-color:#a855f7"><span style="font-size:16px;font-weight:700;color:#a855f7;display:block">CP Maplewood</span>`;
-  h += `<span style="font-size:12px;color:#888">Floor Mgr / Bartender</span>`;
-  h += `<span class="mono" style="font-size:11px;color:#666;display:block;margin-top:6px">Varies · see R365</span></div></div>`;
-  h += `<div style="margin-top:10px;background:#12121a;border-radius:10px;padding:12px 16px;border-left:3px solid #555">`;
-  h += `<div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🎓</span><div>`;
-  h += `<span style="font-size:13px;font-weight:600;color:#888">WKSP GRAD — Graduation Requirements</span>`;
-  h += `<span style="font-size:11px;color:#555;display:block">Async · Hauser, Vicki · May 16 – Aug 14</span></div></div></div></div>`;
-
-  h += `<p style="text-align:center;font-size:12px;color:#333;font-style:italic">📅 Summer 2026 · CYBR 442 + 499 syllabi loaded · Standalone Dashboard v1</p>`;
-
-  document.body.innerHTML = `<div class="toast" id="toast"></div>` + h;
-}
-
 init();
 </script>
 </body>
 </html>
+
